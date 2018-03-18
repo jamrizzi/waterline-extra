@@ -19,8 +19,6 @@ help:
 env:
 	@virtualenv env
 	@env/bin/pip3 install -r requirements.txt
-	@env/bin/pip3 uninstall -y sphinx-js
-	@env/bin/pip3 install git+https://github.com/jamrizzi/sphinx-js.git
 	@echo ::: ENV :::
 
 .PHONY: freeze
