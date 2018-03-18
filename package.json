@@ -1,0 +1,53 @@
+{
+  "name": "waterline-extra",
+  "version": "0.0.1",
+  "description": "Extra methods for waterline",
+  "homepage": "https://github.com/jamrizzi/waterline-extra",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@jamrizzi.com",
+    "url": "https://jamrizzi.com"
+  },
+  "main": "lib/index.js",
+  "files": ["lib"],
+  "scripts": {
+    "lint": "eslint ./",
+    "docs": "make serve",
+    "lint:fix": "eslint --fix ./",
+    "build": "npm run clean && babel src -d lib",
+    "clean": "rm -rf lib",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jamrizzi/waterline-extra",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "4"
+          }
+        }
+      ],
+      "stage-2"
+    ]
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintIgnore": ["lib"]
+}
